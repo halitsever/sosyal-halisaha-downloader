@@ -5,7 +5,7 @@
 <img src="https://halitsever-api.vercel.app/api/repo-title?title=Halisaha+Downloader">
 
 <p align="center">
-⚽ Application for downloading football match records from Halisaha.co and alternatives<br>
+⚽ Application for downloading football match records from Halisaha.co<br>
 
 <br/>
 <br/>

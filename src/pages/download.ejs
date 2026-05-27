@@ -1,42 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Match Video Downloader | Download Your Videos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sosyal Halısaha | Video Downloader</title>
+    <link rel="icon" href="/assets/football.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --pitch-900: #0b3b1d;
+        --pitch-700: #146c38;
+        --pitch-600: #1a8045;
+        --pitch-500: #22a857;
+        --pitch-400: #4dd07a;
+        --pitch-50: #ecfbf0;
+        --ink-900: #0d100e;
+        --ink-700: #2a2f2c;
+        --ink-500: #5b635e;
+        --ink-400: #828a84;
+        --ink-300: #b6bcb7;
+        --line: #e2e6e2;
+        --line-soft: #eef0ed;
+        --surface: #ffffff;
+        --bg: #f4f5f1;
+        --radius-lg: 20px;
+        --radius-md: 12px;
+        --radius-sm: 8px;
+        --shadow-card: 0 1px 0 rgba(15, 30, 20, 0.04), 0 20px 40px -24px rgba(15, 30, 20, 0.18);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Geist', system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background: var(--bg);
+        color: var(--ink-900);
+      }
+
+      .stage {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 24px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stage::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at 50% 50%, rgba(34, 168, 87, 0.06), transparent 60%),
+          repeating-linear-gradient(90deg, transparent 0 80px, rgba(20, 108, 56, 0.035) 80px 81px);
+        pointer-events: none;
+      }
+
+      .stage::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        border: 1px solid rgba(20, 108, 56, 0.08);
+        pointer-events: none;
+      }
+
+      .card {
+        position: relative;
+        z-index: 1;
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-card);
+        max-width: 480px;
+        width: 100%;
+        overflow: hidden;
+        animation: card-in 0.25s ease both;
+      }
+
+      @keyframes card-in {
+        from {
+          opacity: 0;
+          transform: translateY(4px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Brand header */
+      .brand-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 18px 22px;
+        border-bottom: 1px solid var(--line-soft);
+      }
+
+      .brand-logo {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        background-color: var(--pitch-700);
+        -webkit-mask: url('/assets/football.svg') no-repeat center;
+        mask: url('/assets/football.svg') no-repeat center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+      }
+
+      .brand-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink-900);
+        letter-spacing: -0.01em;
+        line-height: 1;
+      }
+
+      .brand-sub {
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--ink-400);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      /* Card body */
+      .card-body {
+        padding: 28px 28px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      /* Result header */
+      .result-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .check-badge {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--pitch-50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .result-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--ink-900);
+        letter-spacing: -0.015em;
+        margin-bottom: 3px;
+      }
+
+      .result-sub {
+        font-size: 14px;
+        color: var(--ink-500);
+        line-height: 1.5;
+      }
+
+      /* Video frame */
+      .video-frame {
+        aspect-ratio: 16 / 9;
+        background: #000;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--line);
+        overflow: hidden;
+      }
+
+      .video-frame video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      /* Meta table */
+      .meta-table {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 14px 12px;
+      }
+
+      .meta-table .k {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-400);
+        padding-top: 2px;
+      }
+
+      .meta-table .v {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--ink-900);
+        letter-spacing: -0.005em;
+        line-height: 1.4;
+        word-break: break-word;
+      }
+
+      .meta-table .v.empty {
+        color: var(--ink-300);
+        font-style: italic;
+      }
+
+      /* Download button */
+      .submit-btn {
+        width: 100%;
+        height: 48px;
+        background: var(--pitch-700);
+        color: #fff;
+        font-family: 'Geist', system-ui, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        border: none;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.18), 0 1px 2px rgba(11, 59, 29, 0.18);
+        transition: background 0.15s ease, transform 0.05s ease;
+      }
+
+      .submit-btn:hover {
+        background: var(--pitch-600);
+      }
+
+      .submit-btn:active {
+        transform: translateY(1px);
+      }
+
+      .submit-btn:focus-visible {
+        outline: 2px solid var(--pitch-500);
+        outline-offset: 2px;
+      }
+    </style>
   </head>
-  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white shadow-lg rounded-2xl p-8 max-w-xl w-full space-y-6">
-      <div class="text-center">
-        <h1 class="text-2xl font-bold">Video Scraped 🎉</h1>
-        <p class="text-gray-600 mt-1">You can preview and download the video from below</p>
-      </div>
+  <body>
+    <div class="stage">
+      <div class="card">
+        <header class="brand-header">
+          <span class="brand-logo" aria-hidden="true"></span>
 
-      <iframe src="<%= data?.video?.videoUrl %>" title="Football match video" class="w-full h-64 rounded-xl border" allowfullscreen></iframe>
+          <div class="brand-text">
+            <span class="brand-name">Sosyal Halısaha</span>
+            <span class="brand-sub">Video Downloader</span>
+          </div>
 
-      <div class="video-info flex flex-col">
-        <span>
-          <a>Title: <%=data?.video?.title %></a>
-        </span>
+        </header>
 
-        <span>
-          <a>Uploader: <%=data?.video?.videoOwner %></a>
-        </span>
-      </div>
-      <div class="text-center">
-        <a href="#" id="downloadButton" class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition"> Download </a>
+        <div class="card-body">
+          <div class="result-header">
+            <div class="check-badge" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M4 9.5l3.5 3.5 6.5-7" stroke="#1a8045" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="result-title">Video ready</h2>
+              <p class="result-sub">Preview below, then download your match recording.</p>
+            </div>
+          </div>
+
+          <div class="video-frame">
+            <video src="<%= data?.video?.videoUrl %>" controls></video>
+          </div>
+
+          <div class="meta-table">
+            <span class="k">Title</span>
+            <span class="v"><%= data?.video?.title || '—' %></span>
+            <span class="k">Uploader</span>
+            <span class="v<%= !data?.video?.videOwner || data?.video?.videOwner === 'No Uploader Found' ? ' empty' : '' %>">
+              <%= (!data?.video?.videOwner || data?.video?.videOwner === 'No Uploader Found') ? '—' : data?.video?.videOwner %>
+            </span>
+          </div>
+
+          <button class="submit-btn" id="downloadBtn">Download</button>
+        </div>
       </div>
     </div>
+
+    <script>
+      document.getElementById('downloadBtn').addEventListener('click', () => {
+        const a = document.createElement('a');
+        a.href = '<%= data.video.videoUrl %>';
+        a.download = 'match-record.mp4';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      });
+    </script>
   </body>
-  <script>
-    document.getElementById("downloadButton").addEventListener("click", () => {
-      const a = document.createElement("a");
-      a.href = "<%= data.video.videoUrl %>";
-      a.download = "match-record.mp4";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    });
-  </script>
 </html>

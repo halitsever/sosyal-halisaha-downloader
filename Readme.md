@@ -28,11 +28,11 @@
 - 🧑‍💻 [**Download match videos**](#) - Scrape match videos from sosyalhalisaha.com
 
 <p align="center">
-  <img src="https://assets.halit.org/api/public/dl/ymUJAb9O?inline=true"/>
+  <img src="/screenshots/home-page.png"/>
 </p>
 
 <p align="center">
-  <img src="https://assets.halit.org/api/public/dl/0ShCfddH?inline=true"/>
+  <img src="/screenshots/download-page.png"/>
 </p>
 
 <p align="center" >

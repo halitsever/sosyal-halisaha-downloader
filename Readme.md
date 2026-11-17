@@ -1,15 +1,15 @@
 <p align="center" class="logo-section">
-<img src="https://assets.halit.org/api/public/dl/-09U0mC7?inline=true" height="80" width="80"/>
+<img src="https://assets.halit.org/api/public/dl/-09U0mC7?inline=true" height="80" width="80" alt="Sosyal Halisaha Downloader logo"/>
 </br>
 
 <img src="https://halitsever-api.vercel.app/api/repo-title?title=Sosyal+Halisaha+Downloader">
 
 <p align="center">
-⚽ Application for downloading football match records from sosyalhalisaha.com<br>
+⚽ Unofficial, self-hosted Node.js web app (Express, EJS) for saving your own football match recordings (halı saha maç videoları) from sosyalhalisaha.com match pages. Not affiliated with Sosyal Halısaha.<br>
 
 <br/>
 <br/>
-<img src="https://img.shields.io/github/sponsors/halitsever"/>
+<img src="https://img.shields.io/github/sponsors/halitsever" alt="GitHub Sponsors"/>
 </p>
 
 <p align="center">
@@ -26,13 +26,15 @@
 </p>
 
 - 🧑‍💻 [**Download match videos**](#) - Scrape match videos from sosyalhalisaha.com
+- **Preview before saving**: paste a match page URL, the app shows the video with its title and uploader, then saves it as `match-record.mp4`.
+- **Self-hosted**: a small Express server with EJS pages. It listens on `PORT` (default `3000`) and only accepts `https://` URLs.
 
 <p align="center">
-  <img src="/screenshots/home-page.png"/>
+  <img src="/screenshots/home-page.png" alt="Home page with the match video URL field"/>
 </p>
 
 <p align="center">
-  <img src="/screenshots/download-page.png"/>
+  <img src="/screenshots/download-page.png" alt="Download page with video preview, title and uploader"/>
 </p>
 
 <p align="center" >
@@ -53,6 +55,11 @@ npm run dev
 
 <p align="center" href="https://github.com/halitsever/halisaha-downloader/issues">
 <img src="https://halitsever-api.vercel.app/api/issue"/>
+</p>
+
+<p align="center">
+Found a bug or have an idea? Open an <a href="https://github.com/halitsever/sosyal-halisaha-downloader/issues">issue</a>.<br/>
+Read the <a href=".github/CONTRIBUTING.md">contributing guide</a> before sending a pull request.
 </p>
 
 <p align="center">

@@ -53,7 +53,7 @@ Running for development:
 npm run dev
 ```
 
-<p align="center" href="https://github.com/halitsever/halisaha-downloader/issues">
+<p align="center" href="https://github.com/halitsever/sosyal-halisaha-downloader/issues">
 <img src="https://halitsever-api.vercel.app/api/issue"/>
 </p>
 

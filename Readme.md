@@ -5,7 +5,7 @@
 <img src="https://halitsever-api.vercel.app/api/repo-title?title=Sosyal+Halisaha+Downloader">
 
 <p align="center">
-⚽ Unofficial, self-hosted Node.js web app (Express, EJS) for saving your own football match recordings (halı saha maç videoları) from sosyalhalisaha.com match pages. Not affiliated with Sosyal Halısaha.<br>
+Unofficial, self-hosted Node.js web app (Express, EJS) for saving your own football match recordings (halı saha maç videoları) from sosyalhalisaha.com match pages. Not affiliated with Sosyal Halısaha.<br>
 
 <br/>
 <br/>
@@ -25,7 +25,7 @@
 <img src="https://halitsever-api.vercel.app/api/details"/>
 </p>
 
-- 🧑‍💻 [**Download match videos**](#) - Scrape match videos from sosyalhalisaha.com
+- [**Download match videos**](#) - Scrape match videos from sosyalhalisaha.com
 - **Preview before saving**: paste a match page URL, the app shows the video with its title and uploader, then saves it as `match-record.mp4`.
 - **Self-hosted**: a small Express server with EJS pages. It listens on `PORT` (default `3000`) and only accepts `https://` URLs.
 

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 
-const site = 'https://halitsever.github.io/sosyal-halisaha-downloader/'
+const site = 'https://projects.halit.org/sosyal-halisaha-downloader/'
 const name = 'Sosyal Halisaha Downloader'
 const repo = 'https://github.com/halitsever/sosyal-halisaha-downloader'
 const license = 'https://opensource.org/licenses/MIT'
@@ -45,7 +45,7 @@ export default defineConfig({
   sitemap: { hostname: site },
 
   head: [
-    /** Cloudflare Web Analytics, one token for every page on halitsever.github.io. */
+    /** Cloudflare Web Analytics, one token for every page on projects.halit.org. */
     ['script', { defer: '', src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "dd7e54d3f48841c187d72d9dbb92a6b6"}' }],
     ['link', { rel: 'icon', href: '/sosyal-halisaha-downloader/favicon-32.png', sizes: '32x32', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/sosyal-halisaha-downloader/favicon.svg', type: 'image/svg+xml' }],

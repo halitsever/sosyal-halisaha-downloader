@@ -33,6 +33,8 @@ const jsonLd = {
 const alternates: Record<string, true> = { 'index.md': true, 'en/index.md': true }
 
 export default defineConfig({
+  /** keeps the page hash map out of every page's HTML, which Semrush reads as a low text-to-HTML ratio */
+  metaChunk: true,
   base: '/sosyal-halisaha-downloader/',
   lang: 'tr',
   title: name,

@@ -13,7 +13,7 @@ Unofficial, self-hosted Node.js web app (Express, EJS) for saving your own footb
 </p>
 
 <p align="center">
-<a align="center" href="https://halitsever.github.io/sosyal-halisaha-downloader/">Documentation</a>
+<a align="center" href="https://projects.halit.org/sosyal-halisaha-downloader/">Documentation</a>
   </p>
 </p>
 

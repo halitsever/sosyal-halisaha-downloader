@@ -6,6 +6,8 @@ Run it with `npm i` and `npm start` on a Node version with built-in TypeScript s
 
 ## Docs
 
+- [Website](https://halitsever.github.io/sosyal-halisaha-downloader/): Turkish guide (install, usage, how it works, FAQ)
+- [English overview](https://halitsever.github.io/sosyal-halisaha-downloader/en/): what it is and how to run it
 - [README](https://github.com/halitsever/sosyal-halisaha-downloader/blob/main/Readme.md): what it does, legal notice, screenshots, install
 - [Server](https://github.com/halitsever/sosyal-halisaha-downloader/blob/main/src/index.ts): Express routes `GET /` and `POST /download`
 - [Video parser](https://github.com/halitsever/sosyal-halisaha-downloader/blob/main/src/scraper/video.parser.ts): how the video URL, title and uploader are read from a match page

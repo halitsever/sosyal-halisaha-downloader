@@ -19,6 +19,13 @@ CI (`.github/workflows/ci.yml`, Node LTS) has no test suite. It runs:
 - A `dev` branch exists, but `main` is the default branch and the CI target. Open PRs against `main`.
 - `src/test/` holds only a `.gitkeep`.
 
+## Docs site
+
+- VitePress site in `docs/`, in Turkish with one English page at `/en/`. Base path `/sosyal-halisaha-downloader/`, deployed to https://halitsever.github.io/sosyal-halisaha-downloader/ by `.github/workflows/docs.yml` on pushes to `main` that touch `docs/**`.
+- Build it with `cd docs && npm ci && npm run build`. It has its own `package.json` and lockfile; the root `tsconfig.json` only includes `src`, so `npm run typecheck` ignores it.
+- SEO head tags, canonical URLs, hreflang and JSON-LD are set in `docs/.vitepress/config.mts`. Page titles describe the task; do not make the third-party brand name the title or H1 focus.
+- Document only what the code does, and keep the "unofficial, not affiliated" notice on the home page and in the footer.
+
 ## Conventions
 
 - Commit subjects in conventional-commit style, in English, subject line only: no body, no trailer.

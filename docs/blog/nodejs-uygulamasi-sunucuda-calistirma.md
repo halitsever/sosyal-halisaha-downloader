@@ -138,4 +138,5 @@ Sosyal Halisaha Downloader'da parola ya da giriş ekranı yok. İnternete açaca
 - [Web scraping nedir, Node.js ile nasıl yapılır?](/blog/web-scraping-nedir)
 - [localhost:3000 adresi ne anlama gelir, açılmazsa ne yapmalı?](/blog/localhost-3000)
 - [Kendi maç videonu telefonuna kaydetmek](/blog/videoyu-telefona-kaydetme)
+- [Node.js: JavaScript'i tarayıcı dışında çalıştıran ortam](/blog/node-js-nedir)
 - [Tüm yazılar](/blog/)

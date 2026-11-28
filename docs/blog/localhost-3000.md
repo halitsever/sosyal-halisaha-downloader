@@ -117,4 +117,5 @@ Uygulama düz HTTP ile çalışıyor ve sertifikası yok. Adresi `http://` ile b
 - [Web scraping nedir, Node.js ile nasıl yapılır?](/blog/web-scraping-nedir)
 - [PM2 ile Node.js uygulamasını sunucuda sürekli çalıştırmak](/blog/nodejs-uygulamasi-sunucuda-calistirma)
 - [Kendi maç videonu telefonuna kaydetmek](/blog/videoyu-telefona-kaydetme)
+- [Bilgisayar ağlarında port: numaralar, aralıklar ve dolu port hatası](/blog/port-nedir)
 - [Tüm yazılar](/blog/)

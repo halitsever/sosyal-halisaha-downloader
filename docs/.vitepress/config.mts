@@ -174,6 +174,12 @@ export default defineConfig({
                 { text: 'Web scraping nedir', link: '/blog/web-scraping-nedir' },
                 { text: 'Web scraping yasal mı', link: '/blog/web-scraping-yasal-mi' },
                 { text: 'EJS şablonları', link: '/blog/ejs-sablon' },
+                { text: 'Video sıkıştırma', link: '/blog/video-sikistirma' },
+                { text: 'MP4 nedir', link: '/blog/mp4-nedir' },
+                { text: 'Node.js nedir', link: '/blog/node-js-nedir' },
+                { text: 'Axios nedir', link: '/blog/axios-nedir' },
+                { text: 'Port nedir', link: '/blog/port-nedir' },
+                { text: 'TypeScript nedir', link: '/blog/typescript-nedir' },
               ],
             },
             {

@@ -82,13 +82,13 @@ Başlık yoksa bir çizgi gösterilir. Hata ekranı da aynı şekilde hatayı ya
 
 `<%=` değerdeki `<`, `>`, `&`, `"` ve `'` karakterlerini HTML varlıklarına çevirir. Böylece maç başlığında `<script>` yazsa bile tarayıcı onu kod olarak değil metin olarak gösterir. Dışarıdan gelen her veride `<%=` kullan. `<%-` yalnızca kendi ürettiğin, güvendiğin HTML için.
 
-Bir ayrıntı daha var: `<%=` HTML için kaçışlar, JavaScript için değil. Projenin indirme ekranındaki betikte şu satır var:
+Bir ayrıntı daha var: `<%=` HTML için kaçışlar, JavaScript için değil. Bir `<script>` etiketinin içinde HTML varlıkları çözülmez. Projenin indirme ekranı eskiden adresi `'<%= data.video.videoUrl %>'` diye yazıyordu; adresteki `&` betiğe `&amp;` olarak geçiyor ve bağlantı bozuluyordu. Şimdi değeri JSON olarak yazıyor:
 
 ```html
-a.href = '<%= data.video.videoUrl %>';
+a.href = <%- JSON.stringify(data.video.videoUrl ?? '').replace(/</g, '\\u003c') %>;
 ```
 
-Bir `<script>` etiketinin içinde HTML varlıkları çözülmez. Adreste `&` olsaydı betiğe `&amp;` olarak yazılırdı ve bağlantı bozulurdu. Betiğe veri aktarırken değeri JSON olarak yazmak daha doğru bir yol. `<video src="...">` satırı ise bir HTML özniteliği olduğu için doğru çalışır.
+`JSON.stringify` tırnakları ve `&` karakterini JavaScript'te geçerli bir dizgiye çevirir. `<` karakterini `\u003c` yapmak da adresin içindeki bir `</script>` parçasının betiği erkenden kapatmasını önler. `<video src="...">` satırı ise bir HTML özniteliği olduğu için `<%=` ile doğru çalışır.
 
 ## EJS ne zaman yeterli?
 

@@ -2,7 +2,7 @@
 
 > Unofficial, self-hosted Node.js web app (Express, EJS, TypeScript) for saving your own football match recordings (halı saha maç videoları) from sosyalhalisaha.com match pages. Not affiliated with Sosyal Halısaha.
 
-Run it with `npm i` and `npm start` on a Node version with built-in TypeScript support (Node 24 LTS), then open `http://localhost:3000`, paste a match page URL and download the video as `match-record.mp4`. Only `https://` URLs are accepted. Downloading content that is not yours may violate the site's terms of use.
+Run it with `npm i` and `npm start` on a Node version with built-in TypeScript support (Node 24 LTS), then open `http://localhost:3000`, paste a match page URL, preview the video and save it from the player. Only `https://` URLs are accepted. Downloading content that is not yours may violate the site's terms of use.
 
 ## Docs
 

@@ -4,10 +4,11 @@ Sosyal Halisaha Downloader is an unofficial, self-hosted Express and EJS web app
 
 ## Verify a change
 
-CI (`.github/workflows/ci.yml`, Node LTS) has no test suite. It runs:
+CI (`.github/workflows/ci.yml`, Node LTS) runs:
 
 - `npm ci`
 - `npm run typecheck` (`tsc --noEmit`)
+- `npm test` (`node --test` over `src/test/*.test.ts`)
 - `PORT=3000 npm start &`, then a smoke test that `curl http://localhost:3000/` answers within 20 seconds.
 
 ## Gotchas
@@ -17,7 +18,7 @@ CI (`.github/workflows/ci.yml`, Node LTS) has no test suite. It runs:
 - The scraper is domain-agnostic on purpose. The domain allowlist in `src/config/scraper.config.ts` and `src/scraper/video.scraper.ts` stays commented out; the only URL check is the `https://` prefix.
 - Keep the "unofficial, not affiliated" framing in any new user-facing text.
 - A `dev` branch exists, but `main` is the default branch and the CI target. Open PRs against `main`.
-- `src/test/` holds only a `.gitkeep`.
+- Tests live in `src/test/` and run with Node's built-in runner, so they need the same TypeScript-capable Node as `npm start`. `npm run dev` is `node --watch src/index.ts`; there is no ts-node.
 
 ## Docs site
 

@@ -49,7 +49,7 @@ Takılırsan [Kurulum](/kurulum) sayfası port ayarını ve sık görülen hatal
 
 ## Arşivini düzenli tut
 
-- **Dosyayı yeniden adlandır.** Her video `match-record.mp4` adıyla iner. İndirir indirmez tarih ve saha adıyla değiştir, örneğin `2026-11-21-kadikoy-sali.mp4`.
+- **Dosyayı yeniden adlandır.** Kaydedilen dosya ya `match-record.mp4` adını ya da maç sitesindeki adını taşır, ikisi de maçı anlatmaz. Kaydeder kaydetmez tarih ve saha adıyla değiştir, örneğin `2026-11-21-kadikoy-sali.mp4`.
 - **Tek klasörde topla.** Yıl ya da sezon klasörleri, eski bir maçı bulmayı kolaylaştırır.
 - **Yedekle.** Maç kayıtları büyük dosyalar. Önemli olanları harici bir diske ya da kendi bulut alanına kopyala.
 - **Özet çıkar.** Bir saatlik kaydın en iyi anlarını kısa bir videoda topla: [halı saha maç özeti](/blog/hali-saha-mac-ozeti).

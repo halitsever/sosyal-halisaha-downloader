@@ -58,7 +58,7 @@ Araç resmi değildir, sosyalhalisaha.com ile bir bağlantısı yoktur ve yalnı
 
 ## Kopyayı düzenli tut
 
-Araç her videoyu `match-record.mp4` adıyla indirir. Birkaç maçtan sonra hangisinin hangisi olduğunu karıştırmamak için dosyayı indirir indirmez yeniden adlandır. Tarih ve sahayı içeren bir ad işini kolaylaştırır, örneğin `2026-11-21-kadikoy-sali.mp4`.
+Kaydedilen dosya ya `match-record.mp4` adını ya da maç sitesindeki adını taşır. Birkaç maçtan sonra hangisinin hangisi olduğunu karıştırmamak için dosyayı indirir indirmez yeniden adlandır. Tarih ve sahayı içeren bir ad işini kolaylaştırır, örneğin `2026-11-21-kadikoy-sali.mp4`.
 
 Telefonda izlemek istiyorsan videoyu doğrudan telefona da kaydedebilirsin. Nasıl yapılacağı [maç videosunu telefona kaydetme](/blog/videoyu-telefona-kaydetme) yazısında.
 

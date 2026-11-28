@@ -38,7 +38,11 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render('index');
 });
-app.listen(AppConfig.port, () => {
+app.listen(AppConfig.port, (error) => {
+    if (error) {
+        logger.error(`Port ${AppConfig.port} is already in use. ...`);
+        process.exit(1);
+    }
     logger.info(`Server is running on ${AppConfig.port} port`);
 });
 ```
@@ -57,12 +61,13 @@ Node.js'i kurunca **npm** de gelir. İki işi var:
 ```json
 "scripts": {
   "start": "node src/index.ts",
-  "dev": "npx ts-node src/index.ts",
+  "dev": "node --watch src/index.ts",
+  "test": "node --test src/test/*.test.ts",
   "typecheck": "tsc --noEmit"
 }
 ```
 
-`npm start` bu projede uygulamayı başlatan komut. `npm run dev` ise şu an çalışmıyor: 28 Kasım 2026'da Node 22 ve Node 24 ile denedik, ikisinde de ts-node `Cannot read properties of undefined (reading 'fileExists')` hatasıyla durdu. Kurulum sayfası da `npm start` kullanmanı söylüyor ([Kurulum](/kurulum)).
+`npm start` bu projede uygulamayı başlatan komut. `npm run dev` aynı dosyayı `--watch` ile çalıştırır ve bir dosyayı kaydettiğinde uygulamayı yeniden başlatır. `npm test` ise Node'un yerleşik test aracıyla testleri çalıştırır. Kurulum adımları [Kurulum](/kurulum) sayfasında.
 
 ## Olay döngüsü
 

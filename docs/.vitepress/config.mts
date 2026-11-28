@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import { copyFileSync } from 'node:fs'
+import { join } from 'node:path'
 
 const site = 'https://projects.halit.org/sosyal-halisaha-downloader/'
 const name = 'Sosyal Halisaha Downloader'
@@ -75,6 +77,10 @@ function pageJsonLd(fm: Record<string, any>, url: string) {
 const alternates: Record<string, true> = { 'index.md': true, 'en/index.md': true }
 
 export default defineConfig({
+  /** llms.txt lives at the repo root, so the build copies it into the site instead of keeping a second copy. */
+  buildEnd(siteConfig) {
+    copyFileSync(join(siteConfig.root, '..', 'llms.txt'), join(siteConfig.outDir, 'llms.txt'))
+  },
   /** keeps the page hash map out of every page's HTML, which Semrush reads as a low text-to-HTML ratio */
   metaChunk: true,
   base: '/sosyal-halisaha-downloader/',

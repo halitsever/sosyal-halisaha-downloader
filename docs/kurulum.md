@@ -85,13 +85,19 @@ TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension ".ts"
 
 Kullandığın Node sürümü TypeScript dosyalarını doğrudan çalıştırmıyor. Node 24 LTS sürümüne geç ve `npm start` komutunu yeniden çalıştır.
 
-### npm run dev hata veriyor
+### Geliştirme modu
 
-`package.json` içinde `ts-node` kullanan bir `dev` komutu da var. Bu sayfa hazırlanırken Node 22 ve Node 24 ile denendi ve ikisinde de `ts-node` hatasıyla durdu. Uygulamayı `npm start` ile çalıştır.
+Kodu değiştirirken `npm run dev` kullanabilirsin. Bu komut `node --watch src/index.ts` çalıştırır: Node'un kendi TypeScript desteğiyle başlar ve bir dosyayı kaydettiğinde uygulamayı yeniden başlatır. `npm start` ile aynı Node sürümünü ister.
 
 ### Port kullanımda
 
-`3000` portunu başka bir program kullanıyorsa uygulama açılmaz. Yukarıdaki gibi `PORT` değişkeniyle boş bir port seç.
+`3000` portunu başka bir program kullanıyorsa uygulama açılmaz ve şu hatayla kapanır:
+
+```text
+Port 3000 is already in use. Stop the program using it or pick another port, for example PORT=8080 npm start.
+```
+
+O programı kapat ya da yukarıdaki gibi `PORT` değişkeniyle boş bir port seç.
 
 ## Kimler erişebilir
 

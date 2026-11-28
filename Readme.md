@@ -26,7 +26,7 @@ Unofficial, self-hosted Node.js web app (Express, EJS) for saving your own footb
 </p>
 
 - [**Download match videos**](#) - Scrape match videos from sosyalhalisaha.com
-- **Preview before saving**: paste a match page URL, the app shows the video with its title and uploader, then saves it as `match-record.mp4`.
+- **Preview before saving**: paste a match page URL, the app shows the video with its title and uploader, and you save it from there. The Download button suggests `match-record.mp4`, but browsers ignore that name for files on another domain and often open the video instead; save it from the player's menu then.
 - **Self-hosted**: a small Express server with EJS pages. It listens on `PORT` (default `3000`) and only accepts `https://` URLs.
 
 <p align="center">
@@ -47,10 +47,22 @@ Package installation:
 npm i
 ```
 
-Running for development:
+Running (Node 24 LTS, or Node 22.18 or later with built-in TypeScript support):
+
+```bash
+npm start
+```
+
+Running for development, restarting on file changes:
 
 ```bash
 npm run dev
+```
+
+Running the tests:
+
+```bash
+npm test
 ```
 
 <p align="center" href="https://github.com/halitsever/sosyal-halisaha-downloader/issues">

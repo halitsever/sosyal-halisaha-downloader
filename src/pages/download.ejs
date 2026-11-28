@@ -267,6 +267,12 @@
         outline: 2px solid var(--pitch-500);
         outline-offset: 2px;
       }
+
+      .download-note {
+        font-size: 13px;
+        color: var(--ink-500);
+        line-height: 1.5;
+      }
     </style>
   </head>
   <body>
@@ -309,6 +315,10 @@
           </div>
 
           <button class="submit-btn" id="downloadBtn">Download</button>
+          <p class="download-note">
+            The video comes straight from the match page's server, so your browser may open it instead of saving it as
+            match-record.mp4. To keep it, use the player's menu or right-click the video and choose Save video as.
+          </p>
         </div>
       </div>
     </div>
@@ -316,7 +326,8 @@
     <script>
       document.getElementById('downloadBtn').addEventListener('click', () => {
         const a = document.createElement('a');
-        a.href = '<%= data.video.videoUrl %>';
+        <%# JSON keeps & and quotes intact here, and escaping < keeps a closing script tag in the URL from ending this block. %>
+        a.href = <%- JSON.stringify(data.video.videoUrl ?? '').replace(/</g, '\\u003c') %>;
         a.download = 'match-record.mp4';
         document.body.appendChild(a);
         a.click();

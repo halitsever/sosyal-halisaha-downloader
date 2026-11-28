@@ -6,7 +6,7 @@ headline: "TypeScript: türleri olan JavaScript, ve Node.js'in onu doğrudan ça
 date: "2026-11-28"
 keyword: "typescript nedir"
 lang: "tr"
-faq: [{"q": "TypeScript ile JavaScript arasındaki fark nedir?", "a": "TypeScript, JavaScript'in üstüne tür bilgisi ekler. Türler yalnızca geliştirme sırasında denetlenir; çalışma anında kod yine JavaScript olarak çalışır. Her geçerli JavaScript kodu aynı zamanda geçerli TypeScript'tir."}, {"q": "Node.js TypeScript dosyasını doğrudan çalıştırır mı?", "a": "Evet, tür ayıklama (type stripping) özelliğiyle. Node.js v22.18.0 ve v23.6.0'dan itibaren varsayılan olarak açık. Türleri siler ve kodu çalıştırır, ama türleri denetlemez. enum gibi bazı söz dizimleri için ek bayrak gerekir."}, {"q": "ts-node hatası alıyorum, ne yapmalıyım?", "a": "Bu projede npm run dev komutu ts-node ile çöküyor. Uygulamayı npm start ile çalıştır; bu komut Node.js'in kendi TypeScript desteğini kullanır."}]
+faq: [{"q": "TypeScript ile JavaScript arasındaki fark nedir?", "a": "TypeScript, JavaScript'in üstüne tür bilgisi ekler. Türler yalnızca geliştirme sırasında denetlenir; çalışma anında kod yine JavaScript olarak çalışır. Her geçerli JavaScript kodu aynı zamanda geçerli TypeScript'tir."}, {"q": "Node.js TypeScript dosyasını doğrudan çalıştırır mı?", "a": "Evet, tür ayıklama (type stripping) özelliğiyle. Node.js v22.18.0 ve v23.6.0'dan itibaren varsayılan olarak açık. Türleri siler ve kodu çalıştırır, ama türleri denetlemez. enum gibi bazı söz dizimleri için ek bayrak gerekir."}, {"q": "ts-node hatası alıyorum, ne yapmalıyım?", "a": "ts-node 10.9.2, TypeScript 7 ile çalışmıyor ve fileExists hatası veriyor. Bu proje ts-node'u bıraktı: npm start ve npm run dev, Node.js'in kendi TypeScript desteğini kullanıyor."}]
 ---
 
 # TypeScript: türleri olan JavaScript, ve Node.js'in onu doğrudan çalıştırması
@@ -83,19 +83,23 @@ Node.js 22.18'den eski bir sürümde `npm start` çalışmaz. [Kurulum sayfası]
 
 ## ts-node ve npm run dev
 
-`package.json` bir de `dev` komutu içeriyor:
+Projenin `dev` komutu eskiden ts-node kullanıyordu:
 
 ```json
 "dev": "npx ts-node src/index.ts"
 ```
 
-Bu komut şu an çalışmıyor. 28 Kasım 2026'da projenin kilitli paketleriyle Node.js 22 ve Node.js 24 üzerinde denedik; ikisinde de şu hatayla durdu:
+28 Kasım 2026'da projenin kilitli paketleriyle Node.js 22 ve Node.js 24 üzerinde denedik; ikisinde de şu hatayla durdu:
 
 ```text
 TypeError: Cannot read properties of undefined (reading 'fileExists')
 ```
 
-Hata ts-node 10.9.2'nin içinden geliyor ve iki Node sürümünde de aynı; yani sorun Node sürümünde değil, ts-node ile projedeki TypeScript 7.0.2'nin birlikte çalışmamasında görünüyor. Depoda henüz düzeltilmedi. Uygulamayı `npm start` ile çalıştır.
+Hata ts-node 10.9.2'nin içinden geliyor ve iki Node sürümünde de aynı; yani sorun Node sürümünde değil, ts-node ile projedeki TypeScript 7.0.2'nin birlikte çalışmamasında. Proje bu yüzden ts-node'u bıraktı. `dev` komutu artık Node'un kendi desteğini izleme moduyla kullanıyor:
+
+```json
+"dev": "node --watch src/index.ts"
+```
 
 ## TypeScript öğrenmeye değer mi?
 
@@ -115,7 +119,7 @@ Evet, tür ayıklama (type stripping) özelliğiyle. Node.js v22.18.0 ve v23.6.0
 
 ### ts-node hatası alıyorum, ne yapmalıyım?
 
-Bu projede npm run dev komutu ts-node ile çöküyor. Uygulamayı npm start ile çalıştır; bu komut Node.js'in kendi TypeScript desteğini kullanır.
+ts-node 10.9.2, TypeScript 7 ile çalışmıyor ve fileExists hatası veriyor. Bu proje ts-node'u bıraktı: npm start ve npm run dev, Node.js'in kendi TypeScript desteğini kullanıyor.
 
 ## İlgili yazılar
 

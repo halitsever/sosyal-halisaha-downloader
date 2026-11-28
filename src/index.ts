@@ -44,6 +44,14 @@ app.post('/download', async (req: express.Request, res: express.Response) => {
 });
 
 
-app.listen(AppConfig.port, () => {
+// Express 5 hands listen errors to this callback instead of throwing, so without the check a busy port looks like a start.
+app.listen(AppConfig.port, (error) => {
+    if (error) {
+        const code = (error as NodeJS.ErrnoException).code;
+        logger.error(code === 'EADDRINUSE'
+            ? `Port ${AppConfig.port} is already in use. Stop the program using it or pick another port, for example PORT=8080 npm start.`
+            : `Could not start the server on port ${AppConfig.port}: ${error.message}`);
+        process.exit(1);
+    }
     logger.info(`Server is running on ${AppConfig.port} port`);
-}); 
+});

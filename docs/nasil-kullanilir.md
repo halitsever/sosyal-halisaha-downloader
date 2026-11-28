@@ -1,6 +1,6 @@
 ---
 title: 'Halısaha maç kaydı nasıl indirilir: adım adım kullanım'
-description: Halısaha maç kaydını indirmenin adımları. Maç bağlantısını yapıştır, videoyu önizle ve match-record.mp4 olarak kaydet. Uygulamanın ekran görüntüleriyle.
+description: Halısaha maç kaydını indirmenin adımları. Maç bağlantısını yapıştır, videoyu önizle ve bilgisayarına kaydet. Uygulamanın ekran görüntüleriyle.
 ---
 
 # Halısaha maç kaydı nasıl indirilir
@@ -47,12 +47,12 @@ Bu ekranda üç şey görürsün:
 
 ## 5' Dosyayı kaydet
 
-**Download** düğmesine bas. Tarayıcı dosyayı `match-record.mp4` adıyla indirmeye başlar ve dosya, tarayıcının indirilenler klasörüne düşer.
+**Download** düğmesine bas. Düğme, dosyayı `match-record.mp4` adıyla indirmesini tarayıcıdan ister. Ama video maç sitesinin kendi sunucusundan geldiği için çoğu tarayıcı bu isteği dikkate almaz ve videoyu açar. O zaman aşağıdaki yolla kaydet.
 
 Video dosyası sunucudan geçmez. Tarayıcın onu doğrudan videonun kendi adresinden alır. Bu yüzden indirme hızı senin bağlantına ve videonun bulunduğu sunucuya bağlıdır.
 
-::: tip Video indirilmek yerine yeni sekmede açılırsa
-Bazı tarayıcılar başka bir alan adından gelen dosyalarda indirme isteğini dikkate almaz ve videoyu oynatır. Bu durumda oynatıcının üç nokta menüsünden ya da videoya sağ tıklayıp "Videoyu farklı kaydet" seçeneğinden kaydedebilirsin. Dosya adını kendin verirsin.
+::: tip Video indirilmek yerine açılırsa
+Tarayıcılar başka bir alan adından gelen dosyalarda indirme isteğini ve önerilen dosya adını dikkate almaz, videoyu oynatır. Bu durumda oynatıcının üç nokta menüsünden ya da videoya sağ tıklayıp "Videoyu farklı kaydet" seçeneğinden kaydedebilirsin. Dosya adını kendin verirsin.
 :::
 
 ## Hata sayfası görürsen

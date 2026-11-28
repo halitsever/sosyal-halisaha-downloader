@@ -53,7 +53,7 @@ Terminal komut satırına geri döndüyse sunucu kapanmış demektir. Terminali 
 
 ### 2. Doğru komutla mı başlattın?
 
-Bu projede uygulama `npm start` ile başlar ve Node 24 LTS ister. `npm run dev` komutu bu sayfa yazılırken Node 24'te `ts-node` hatasıyla duruyordu; kullanma. Eski bir Node sürümünde `ERR_UNKNOWN_FILE_EXTENSION` hatası alırsın. İkisi de [Kurulum](/kurulum) sayfasında anlatılıyor.
+Bu projede uygulama `npm start` ile başlar ve Node 24 LTS ister. Eski bir Node sürümünde `ERR_UNKNOWN_FILE_EXTENSION` hatası alırsın. Port başka bir programdaysa uygulama `Port 3000 is already in use` yazıp kapanır. İkisi de [Kurulum](/kurulum) sayfasında anlatılıyor.
 
 ### 3. Port başka bir programda mı?
 

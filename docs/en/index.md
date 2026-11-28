@@ -6,7 +6,7 @@ sidebar: false
 
 # Save your own football match recordings, self-hosted
 
-Sosyal Halisaha Downloader is a small Node.js web app that you run yourself. You paste the URL of a match page, the app shows the recording with its title and uploader, and your browser saves it as `match-record.mp4`.
+Sosyal Halisaha Downloader is a small Node.js web app that you run yourself. You paste the URL of a match page, the app shows the recording with its title and uploader, and you save the file from there.
 
 ::: warning Unofficial
 This project is not an official tool and is not affiliated with or endorsed by sosyalhalisaha.com. It is meant for education and personal use: archiving publicly available recordings of your own matches. Downloading, sharing or archiving content that is not yours may violate the platform's terms of use and copyright or data protection law.
@@ -53,7 +53,7 @@ The parser reads four things from the page:
 | `.owner a` | Uploader |
 | `picture img` | Thumbnail |
 
-The video file never passes through the server. The preview page points a `<video>` element at the file's own URL, and the Download button clicks a link to it with `download="match-record.mp4"`. Nothing is stored: there is no database and no history.
+The video file never passes through the server. The preview page points a `<video>` element at the file's own URL, and the Download button clicks a link to it with `download="match-record.mp4"`. Browsers ignore that file name for files on another domain, so most of them open the video, and you save it from the player's menu or with right-click and Save video as. Nothing is stored: there is no database and no history.
 
 ## When it breaks
 

@@ -71,7 +71,7 @@ Bu komut `npm start` komutunu `halisaha` adıyla PM2'ye verir. Farklı bir port 
 PORT=8080 pm2 start npm --name halisaha -- start
 ```
 
-`npm run dev` kullanma. Bu sayfa yazılırken o komut `ts-node` hatasıyla duruyordu; uygulamayı `npm start` başlatır.
+Sunucuda `npm run dev` kullanma. O komut dosya değişikliklerini izleyip uygulamayı yeniden başlatmak için; sunucuda uygulamayı `npm start` başlatır.
 
 ## Günlük komutlar
 

@@ -28,7 +28,7 @@ faq:
 
 ## Önce kaydı bilgisayara ya da telefona al
 
-Özet, elindeki bir dosyadan çıkar. Kendi maçının kaydını Sosyal Halisaha Downloader ile `match-record.mp4` olarak indirebilirsin ([Nasıl kullanılır](/nasil-kullanilir)). Telefona doğrudan kaydetmek için [videoyu telefona kaydetme](/blog/videoyu-telefona-kaydetme) yazısına bak.
+Özet, elindeki bir dosyadan çıkar. Kendi maçının kaydını Sosyal Halisaha Downloader ile kaydedebilirsin ([Nasıl kullanılır](/nasil-kullanilir)); aşağıdaki komutlarda dosyanın adı `match-record.mp4`. Telefona doğrudan kaydetmek için [videoyu telefona kaydetme](/blog/videoyu-telefona-kaydetme) yazısına bak.
 
 Araç resmi değildir ve yalnızca kendi oynadığın maçların kayıtları için yazıldı.
 

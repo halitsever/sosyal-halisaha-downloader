@@ -125,4 +125,5 @@ Evet. Telefonun galeri uygulamasındaki kırpma aracıyla her gol için ayrı bi
 - [Halı saha maçını izlemek ve kaydını saklamak](/blog/hali-saha-mac-izle)
 - [localhost:3000 adresi ne anlama gelir, açılmazsa ne yapmalı?](/blog/localhost-3000)
 - [Kendi maç videonu telefonuna kaydetmek](/blog/videoyu-telefona-kaydetme)
+- [Büyük bir maç videosunu ffmpeg ile küçültmek](/blog/video-sikistirma)
 - [Tüm yazılar](/blog/)

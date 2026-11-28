@@ -123,4 +123,5 @@ Express'te views ayarıyla belirttiğin klasörde. Bu projede src/pages klasör�
 - [Web scraping nedir, Node.js ile nasıl yapılır?](/blog/web-scraping-nedir)
 - [localhost:3000 adresi ne anlama gelir, açılmazsa ne yapmalı?](/blog/localhost-3000)
 - [PM2 ile Node.js uygulamasını sunucuda sürekli çalıştırmak](/blog/nodejs-uygulamasi-sunucuda-calistirma)
+- [TypeScript: türleri olan JavaScript, ve Node.js'in onu doğrudan çalıştırması](/blog/typescript-nedir)
 - [Tüm yazılar](/blog/)

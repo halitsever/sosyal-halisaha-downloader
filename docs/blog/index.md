@@ -1,7 +1,7 @@
 ---
 title: "Halı Saha Maç Kaydı ve Node.js Yazıları"
 titleTemplate: false
-description: "Halı saha maç kaydını saklama, özet çıkarma ve telefona kaydetme rehberleri; web scraping, EJS, PM2 ve localhost:3000 üzerine Türkçe Node.js yazıları."
+description: "Halı saha maç kaydını saklama, sıkıştırma ve telefona alma rehberleri; Node.js, TypeScript, axios, port, MP4 ve web scraping üzerine Türkçe yazılar."
 ---
 
 # Blog: maç kayıtları, web scraping ve Node.js
@@ -39,3 +39,27 @@ EJS nedir, Express ile nasıl kullanılır? Etiketler, res.render ile veri gönd
 ## [Kendi maç videonu telefonuna kaydetmek](/blog/videoyu-telefona-kaydetme)
 
 Maç videonu telefona kaydetmek için bilgisayarda çalışan aracı aynı Wi-Fi'deki telefondan aç, videoyu önizle ve indir. Android ve iPhone için adımlar.
+
+## [Büyük bir maç videosunu ffmpeg ile küçültmek](/blog/video-sikistirma)
+
+Video sıkıştırma nasıl yapılır? Maç kaydını ffmpeg ile CRF, çözünürlük ve ses ayarlarıyla küçült. Denenmiş komutlar, ölçülmüş boyutlar ve sık yapılan hatalar.
+
+## [MP4 dosyası ne demek, içinde neler var?](/blog/mp4-nedir)
+
+MP4 nedir, ne demek? MP4'ün bir kap biçimi olduğunu, içindeki H.264 ve AAC'yi, dosyanın neden açılmadığını ve ffprobe ile nasıl inceleneceğini anlatıyoruz.
+
+## [Node.js: JavaScript'i tarayıcı dışında çalıştıran ortam](/blog/node-js-nedir)
+
+Node.js nedir, ne işe yarar? V8, npm, LTS sürümleri ve olay döngüsü; küçük bir Express uygulaması üzerinden Node.js'in kurulup çalıştırılmasını anlatıyoruz.
+
+## [Axios ile HTTP isteği atmak: örnekler ve hata yönetimi](/blog/axios-nedir)
+
+Axios nedir, nasıl kullanılır? Node.js'te GET isteği, axios.create ile ortak ayarlar, zaman aşımı, hata mesajları ve fetch farkı, gerçek proje örnekleriyle.
+
+## [Bilgisayar ağlarında port: numaralar, aralıklar ve dolu port hatası](/blog/port-nedir)
+
+Port nedir, ne demek? Ağdaki port numaraları, 80, 443 ve 3000 gibi örnekler, port aralıkları, PORT ayarı ve port dolu hatasının çözümü tek yazıda.
+
+## [TypeScript: türleri olan JavaScript, ve Node.js'in onu doğrudan çalıştırması](/blog/typescript-nedir)
+
+TypeScript nedir, JavaScript'ten farkı ne? Tür denetimi, tsc --noEmit, Node.js'in tür ayıklama özelliği ve ts-node hatası, açık kaynak bir projeden örneklerle.

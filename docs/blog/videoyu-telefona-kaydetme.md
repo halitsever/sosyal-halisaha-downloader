@@ -119,4 +119,5 @@ Telefonun ve bilgisayarın aynı Wi-Fi ağında olduğunu, adresin `http://` ile
 - [Halı saha maçını izlemek ve kaydını saklamak](/blog/hali-saha-mac-izle)
 - [Halı saha maç kaydından özet video çıkarmak](/blog/hali-saha-mac-ozeti)
 - [localhost:3000 adresi ne anlama gelir, açılmazsa ne yapmalı?](/blog/localhost-3000)
+- [MP4 dosyası ne demek, içinde neler var?](/blog/mp4-nedir)
 - [Tüm yazılar](/blog/)

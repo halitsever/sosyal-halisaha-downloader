@@ -112,4 +112,5 @@ Kısa bir evet ya da hayır cevabı yok. Sitenin kullanım koşulları, kişisel
 - [Web scraping yasal mı? Kullanım koşulları, KVKK ve telif](/blog/web-scraping-yasal-mi)
 - [localhost:3000 adresi ne anlama gelir, açılmazsa ne yapmalı?](/blog/localhost-3000)
 - [EJS ile Express uygulamasına basit bir arayüz yazmak](/blog/ejs-sablon)
+- [Axios ile HTTP isteği atmak: örnekler ve hata yönetimi](/blog/axios-nedir)
 - [Tüm yazılar](/blog/)

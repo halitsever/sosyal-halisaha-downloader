@@ -8,6 +8,19 @@ Run it with `npm i` and `npm start` on a Node version with built-in TypeScript s
 
 - [Website](https://projects.halit.org/sosyal-halisaha-downloader/): Turkish guide (install, usage, how it works, FAQ)
 - [English overview](https://projects.halit.org/sosyal-halisaha-downloader/en/): what it is and how to run it
+- [Maç videoları](https://projects.halit.org/sosyal-halisaha-downloader/mac-videosu-kaydet/): Turkish landing page on keeping your own match recordings, with screenshots and three setup steps
+- [Blog](https://projects.halit.org/sosyal-halisaha-downloader/blog/): Turkish articles on saving recordings, highlights, localhost:3000, PM2, web scraping and EJS
+
+## Blog (Turkish)
+
+- [Halı saha maçını izlemek ve kaydını saklamak](https://projects.halit.org/sosyal-halisaha-downloader/blog/hali-saha-mac-izle): Halı saha maç kaydını nerede izlersin, kendi kopyanı nasıl saklarsın ve paylaşmadan önce nelere dikkat etmelisin? Diğer oyuncuların hakları dahil.
+- [Web scraping nedir, Node.js ile nasıl yapılır?](https://projects.halit.org/sosyal-halisaha-downloader/blog/web-scraping-nedir): Web scraping nedir, nasıl çalışır? Bir sayfayı axios ile isteyip jsdom ile okuyan gerçek bir Node.js örneği üzerinden adım adım ve sınırlarıyla anlatım.
+- [Halı saha maç kaydından özet video çıkarmak](https://projects.halit.org/sosyal-halisaha-downloader/blog/hali-saha-mac-ozeti): Halı saha maç kaydından golleri ayırıp kısa bir özet video yap: telefonun kendi düzenleyicisiyle ya da ffmpeg ile, yeniden kodlamadan ve tek komutla.
+- [Web scraping yasal mı? Kullanım koşulları, KVKK ve telif](https://projects.halit.org/sosyal-halisaha-downloader/blog/web-scraping-yasal-mi): Web scraping yasal mı? Cevap duruma bağlı. Kullanım koşulları, robots.txt, KVKK ve telif açısından genel bir bakış ve bu projenin kendine koyduğu sınırlar.
+- [localhost:3000 adresi ne anlama gelir, açılmazsa ne yapmalı?](https://projects.halit.org/sosyal-halisaha-downloader/blog/localhost-3000): localhost:3000 nedir, neden açılmıyor? Sunucu kapalı, port dolu, https yazılmış ya da başka cihazdan açılıyor olabilir. Node.js örneğiyle tek tek çözümleri.
+- [PM2 ile Node.js uygulamasını sunucuda sürekli çalıştırmak](https://projects.halit.org/sosyal-halisaha-downloader/blog/nodejs-uygulamasi-sunucuda-calistirma): PM2 nedir, ne işe yarar? Node.js uygulamasını terminal kapansa da çalışır tutmak, çökünce yeniden başlatmak ve açılışta başlatmak için adım adım kurulum.
+- [EJS ile Express uygulamasına basit bir arayüz yazmak](https://projects.halit.org/sosyal-halisaha-downloader/blog/ejs-sablon): EJS nedir, Express ile nasıl kullanılır? Etiketler, res.render ile veri gönderme ve HTML kaçışı, küçük bir açık kaynak uygulamanın gerçek şablonları üzerinden.
+- [Kendi maç videonu telefonuna kaydetmek](https://projects.halit.org/sosyal-halisaha-downloader/blog/videoyu-telefona-kaydetme): Maç videonu telefona kaydetmek için bilgisayarda çalışan aracı aynı Wi-Fi'deki telefondan aç, videoyu önizle ve indir. Android ve iPhone için adımlar.
 - [README](https://github.com/halitsever/sosyal-halisaha-downloader/blob/main/Readme.md): what it does, legal notice, screenshots, install
 - [Server](https://github.com/halitsever/sosyal-halisaha-downloader/blob/main/src/index.ts): Express routes `GET /` and `POST /download`
 - [Video parser](https://github.com/halitsever/sosyal-halisaha-downloader/blob/main/src/scraper/video.parser.ts): how the video URL, title and uploader are read from a match page

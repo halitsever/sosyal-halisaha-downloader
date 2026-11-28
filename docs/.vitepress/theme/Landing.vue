@@ -60,6 +60,8 @@ const guides = [
   { link: '/nasil-kullanilir', title: 'Nasıl kullanılır', text: 'Bağlantıyı yapıştırmaktan dosyayı kaydetmeye kadar, ekran görüntüleriyle.' },
   { link: '/nasil-calisir', title: 'Nasıl çalışır', text: 'Aracın maç sayfasında neye baktığı ve sayfa değişince neyin bozulduğu.' },
   { link: '/sss', title: 'Sık sorulan sorular', text: 'Resmi olup olmadığı, kimin videosunu indirebileceğin ve sık görülen hatalar.' },
+  { link: '/mac-videosu-kaydet/', title: 'Maç videoları', text: 'Kendi maç kayıtlarını arşivlemek, düzenlemek ve yedeklemek.' },
+  { link: '/blog/', title: 'Blog', text: 'Telefona kaydetme, maç özeti, localhost:3000, PM2 ve web scraping yazıları.' },
 ]
 </script>
 
